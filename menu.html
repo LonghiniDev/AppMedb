@@ -1,0 +1,142 @@
+<div class="page">
+  <!-- MENU -->
+  <div class="menu white" id="Menu">
+    <div class="list no-border">
+      <div class="item green">
+        <div class="left">
+          <img class="avatar circle" src="img/User.jpg">
+        </div>
+          <h1>User</h1>
+          <p>user@gmail.com</p>
+        </div>
+
+        <a class="item" onclick="openPage('perfil')">
+          <div class="left">
+            <i class="icon ion-android-person green "></i>
+          </div>
+          <h1>Perfil</h1>
+        </a>
+        
+        <a class="item" onclick="openPage('contato')">
+          <div class="left">
+            <i class="icon ion-iphone green"></i>
+          </div>
+          <h1>Contato</h1>
+        </a>
+
+        <a class="item" onclick="alerta()">
+          <div class="left">
+            <i class="icon ion-gear-a green"></i>
+          </div>
+          <h1>Configurações</h1>
+        </a>
+
+        <a onclick="closeMenu('Menu')" class="item">
+          <div class="left">
+            <i class="icon ion-arrow-left-c green"></i>
+          </div>
+          <h1>Voltar</h1>
+        </a>
+
+        <a onclick="backPage()" class="item">
+          <h1>Sair</h1>
+        </a>
+      </div>
+    </div>
+    
+
+    <!-- HEADER -->
+    <div class="header green-600">
+      <div class="align-center">
+        <h1 class="text-white text-bold">Serviços</h1>
+      </div>
+    </div>
+
+    <!-- TABS  -->
+    <div class="header sub shadow tab green-600 text-strong">
+      <button class="icon ion-home text-white text-bold" onclick="openTab('home')">Home</button>
+      <button class="icon ion-android-add-circle text-white text-bold" onclick="openTab('editar')">Adicionar</button>
+      <button class="icon ion ion-search text-white text-bold" onclick="openTab('pesquisa')">Pesquisar</button>
+      <button class="ion ion-navicon-round text-white text-big" onclick="openMenu('Menu')">Menu</button>
+    </div>
+
+    <div class="content has-header has-sub-header">
+
+    <!-- ADD SERVIÇO -->
+
+    <div class="tab-content  radius-big" id="editar">
+      <div class="list">
+
+      <div class="list white" id="formCadaster">
+        <div class="item">
+          <input type="text" id="nome_servico" placeholder="Nome Serviço">
+        </div>
+
+          <div class="item">
+            <input type="text" id="cliente" placeholder="Cliente">
+          </div>
+
+          <div class="item">
+            <input type="text" id="dia" placeholder="XX/XX/XXXX Data">
+          </div>
+
+          <div class="item">
+            <input type="text" id="custo" placeholder="R$ Custo">
+          </div>
+          
+          <div class="item">
+            <input type="text" id="info" placeholder="Breve Descrição">
+          </div>
+        </div>
+        <div class="list white">
+
+        <!-- FOOTER -->
+        <div class="item">
+          <div class="align-center">
+            <p class="text-strong"></p>
+          </div>
+
+        <div class="space"></div>
+          <button class="green-400 radius full" onclick="addUser()">Confirmar cadastro!</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    <!-- HOME -->
+
+    <div class="tab-content  radius-big" id="home">
+      <div class="list white">
+        <div id="mostrar" class="item" data="users">
+          <h2 class="text-strong text-big">Serviço: ${nome_servico}</h2>
+            <p class="text-big">Cliente: ${cliente}</p>
+            <p class="text-big">Data: ${dia}</p>
+            <p class="text-big">R$ ${custo}</p>
+            <p> Descrição Serviço: ${info}</p>
+          <div class="right-top padding">
+            <button class="icon ion-trash-b black border" onclick="deleteUser($$index)"></button>
+            <button class="icon ion-edit black border" onclick="editUser($$index)"></button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <!-- PESQUISA -->
+    <div class="tab-content padding radius-big " id="pesquisa">
+      <div class="row">
+        <div class="col">
+          <div class="list grey-100">
+            <div class="item icon ion-search text-big text-bold">
+              <input type="text" placeholder="Pesquisar Serviço" class="" id="busca">
+            </div>
+
+            <div class="item">
+              <button class="green full" onclick="buscar()">Buscar Serviço</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

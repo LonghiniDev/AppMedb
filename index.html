@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+  <meta name="format-detection" content="telephone=no">
+  <meta charset="utf-8">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <title>MedB</title>
+</head>
+
+<body>
+  <!--Imagem de Fundo-->
+  <div class="content row cover blend-soft-light light-green-800" style="background-image:url(img/1.jpg)">
+
+    <div class="col padding ">
+      <!--Logo -->
+      <div class="align-center">
+        <img src="img/2.png" class="avatar">
+        <p class="text-huge text-bold">Seja Bem Vindo</p>
+      </div>
+
+      <!--Inicio List Login-->
+      <div class="list radius white-opacity-70">
+      <p class="text-strong"></p>
+        <div class="item label-float text-strong text-black">
+          <label>Usuário</label>
+          <input type="text" id="user">
+        </div>
+        <div class="item label-float text-strong text-black">
+          <label>Senha</label>
+          <input type="password" id="password">
+        </div>
+
+        <div class="item">
+          <button class="green-500 radius full text-black" onclick="login()">Login</button>
+        </div>
+
+        <div class="item">
+          <button class="green-400 radius full text-black" onclick="openPage('cadastro')">Cadastre-se</button>
+          <div class="space"></div>
+        </div>
+      </div>
+    </div>
+  <!--Fim Login-->
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="mobileui/mobileui.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/servicos.js"></script>
+  <script type="text/javascript" src="js/editar.js"></script>
+  <script type="text/javascript" src="js/cadastro.js"></script>
+  <script type="text/javascript">new Swiper('.swipper-gallery', {
+    pagination: '.swiper-pagination'
+  });</script>
+</body>
+
+</html>
